@@ -1,14 +1,20 @@
-/* Basic Layout Structure */
-nav { display: flex; justify-content: space-between; padding: 20px; background: #1b4332; color: white; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-.hero { height: 300px; background: #f77f00; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; }
-.card { border: 2px solid #1b4332; padding: 40px; text-align: center; }
-
-/* Placeholders for when you add assets later */
-.profile-placeholder, .gallery-placeholder { 
-    background: #e0e0e0; 
-    width: 200px; 
-    height: 200px; 
-    margin: 20px auto; 
+:root {
+    --brand-green: #1b4332;
+    --brand-orange: #f77f00;
+    --white: #ffffff;
 }
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; }
+
+nav { display: flex; justify-content: space-between; padding: 20px 50px; background: var(--brand-green); color: var(--white); }
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav a { color: var(--white); text-decoration: none; font-weight: bold; }
+
+.hero { height: 400px; background: var(--brand-orange); color: var(--white); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.about, .services, .gallery { padding: 50px; text-align: center; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { border: 2px solid var(--brand-green); padding: 30px; border-radius: 8px; }
+
+.profile-placeholder, .gallery-placeholder { background: #e0e0e0; width: 200px; height: 200px; margin: 20px auto; border-radius: 50%; }
+
+footer { background: var(--brand-green); color: var(--white); text-align: center; padding: 20px; }

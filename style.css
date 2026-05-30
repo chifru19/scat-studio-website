@@ -1,0 +1,14 @@
+/* Basic Layout Structure */
+nav { display: flex; justify-content: space-between; padding: 20px; background: #1b4332; color: white; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+.hero { height: 300px; background: #f77f00; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; }
+.card { border: 2px solid #1b4332; padding: 40px; text-align: center; }
+
+/* Placeholders for when you add assets later */
+.profile-placeholder, .gallery-placeholder { 
+    background: #e0e0e0; 
+    width: 200px; 
+    height: 200px; 
+    margin: 20px auto; 
+}

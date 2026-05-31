@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S-CAT STUDIO | Humanity First</title>
+    <title>S-CAT STUDIO | Official</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,50 +12,77 @@
         <nav>
             <div class="brand">S-CAT STUDIO</div>
             <ul>
-                <li><a href="#home">Aktuelles</a></li>
-                <li><a href="#about">Über Uns</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#services">Angebote</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#home" data-lang="home">Home</a></li>
+                <li><a href="#about" data-lang="about">About</a></li>
+                <li><a href="#competition" data-lang="comp">Competition</a></li>
+                <li><a href="#contact" data-lang="contact">Contact</a></li>
             </ul>
+            <select id="langSwitcher" onchange="changeLanguage()">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <h1>Humanity First</h1>
-            <p>Recrutement • Formation • Accompagnement Culturel</p>
+            <h1 data-lang="title">S-CAT STUDIO</h1>
+            <p data-lang="subtitle">Recruitment • Training • Cultural Management</p>
         </section>
 
         <section id="about" class="about">
-            <h2>À Propos du Fondateur</h2>
-            <div class="profile-placeholder"></div>
-            <div class="profile-info">
-                <p><strong>Nom:</strong> AGBOR TABI</p>
-                <p><strong>Prénom:</strong> Ako enow Chérif</p>
-                <p><strong>Fonction:</strong> Fondateur / PDG</p>
-            </div>
+            <h2 data-lang="about_title">Who We Are</h2>
+            <p data-lang="about_text">
+                S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management. We produce studio and recording projects, coordinate international volunteers, and manage artistic and cultural events. We help artists and cultural professionals connect, learn, and grow.
+            </p>
         </section>
 
-        <section id="services" class="services">
-            <h2>Nos Offres</h2>
-            <div class="grid">
-                <div class="card"><h3>Recrutement</h3></div>
-                <div class="card"><h3>Formation</h3></div>
-                <div class="card"><h3>Accompagnement Culturel</h3></div>
-            </div>
-        </section>
-
-        <section id="projects" class="gallery">
-            <h2>Nos Espaces</h2>
-            <div class="gallery-placeholder"></div>
+        <section id="competition" class="competition">
+            <h2 data-lang="comp_title">Afrosta Live Music Competition</h2>
+            <p data-lang="comp_text">Show your talent, get votes, and win big rewards!</p>
         </section>
     </main>
 
     <footer id="contact">
-        <p>Siège Lomé : Ets NOGEN / Novissi</p>
+        <p data-lang="footer_info">Lomé Headquarters: Ets NOGEN / Novissi</p>
         <p>Email: scatstudio@gmail.com | Tel: +49 176 63165273</p>
     </footer>
 
+    <script>
+        const translations = {
+            fr: {
+                home: "Accueil", about: "À Propos", comp: "Compétition", contact: "Contact",
+                title: "S-CAT STUDIO", subtitle: "Recrutement • Formation • Gestion Culturelle",
+                about_title: "Qui sommes-nous ?",
+                about_text: "S-CAT STUDIO est une organisation créative et culturelle spécialisée dans le recrutement, la formation et la gestion culturelle. Nous produisons des projets de studio, coordonnons des bénévoles internationaux et gérons des événements artistiques.",
+                comp_title: "Compétition Musicale Afrosta", comp_text: "Montrez votre talent, obtenez des votes et gagnez de grandes récompenses !",
+                footer_info: "Siège Lomé : Ets NOGEN / Novissi"
+            },
+            en: {
+                home: "Home", about: "About Us", comp: "Competition", contact: "Contact",
+                title: "S-CAT STUDIO", subtitle: "Recruitment • Training • Cultural Management",
+                about_title: "Who We Are",
+                about_text: "S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management. We produce studio and recording projects, coordinate international volunteers, and manage artistic and cultural events.",
+                comp_title: "Afrosta Live Music Competition", comp_text: "Show your talent, get votes, and win big rewards!",
+                footer_info: "Lomé Headquarters: Ets NOGEN / Novissi"
+            },
+            de: {
+                home: "Startseite", about: "Über uns", comp: "Wettbewerb", contact: "Kontakt",
+                title: "S-CAT STUDIO", subtitle: "Rekrutierung • Ausbildung • Kulturmanagement",
+                about_title: "Über uns",
+                about_text: "S-CAT STUDIO ist eine kreative und kulturelle Organisation, die sich auf Rekrutierung, Ausbildung und Kulturmanagement konzentriert. Wir produzieren Studio- und Aufnahmeprojekte, koordinieren internationale Freiwillige und verwalten künstlerische und kulturelle Veranstaltungen.",
+                comp_title: "Afrosta Live Musikwettbewerb", comp_text: "Zeigen Sie Ihr Talent, erhalten Sie Stimmen und gewinnen Sie große Belohnungen!",
+                footer_info: "Hauptsitz Lomé: Ets NOGEN / Novissi"
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('langSwitcher').value;
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.innerText = translations[lang][el.getAttribute('data-lang')];
+            });
+        }
+    </script>
 </body>
 </html>

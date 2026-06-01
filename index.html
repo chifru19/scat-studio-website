@@ -12,10 +12,14 @@
         <nav>
             <div class="brand">S-CAT STUDIO</div>
             <ul>
-                <li><a href="#home" data-lang="home">Home</a></li>
-                <li><a href="#about" data-lang="about">About</a></li>
-                <li><a href="#competition" data-lang="comp">Competition</a></li>
-                <li><a href="#contact" data-lang="contact">Contact</a></li>
+                <li><a href="#aktuelles" data-lang="aktuelles">Aktuelles</a></li>
+                <li><a href="#about" data-lang="about">Über Uns</a></li>
+                <li><a href="#projekte" data-lang="projekte">Projekte</a></li>
+                <li><a href="#projektarchiv" data-lang="projektarchiv">Projektarchiv</a></li>
+                <li><a href="#angebote" data-lang="angebote">Angebote</a></li>
+                <li><a href="#shop" data-lang="shop">Shop</a></li>
+                <li><a href="#contact" data-lang="contact">Kontakt</a></li>
+                <li><a href="#warenkorb" data-lang="warenkorb">Warenkorb (0)</a></li>
             </ul>
             <select id="langSwitcher" onchange="changeLanguage()">
                 <option value="fr">Français</option>
@@ -26,7 +30,7 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="aktuelles" class="hero">
             <h1 data-lang="title">S-CAT STUDIO</h1>
             <p data-lang="subtitle">Recruitment • Training • Cultural Management</p>
         </section>
@@ -34,17 +38,29 @@
         <section id="about" class="about">
             <h2 data-lang="about_title">Who We Are</h2>
             <p data-lang="about_text">
-                S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management. We produce studio and recording projects, coordinate international volunteers, and manage artistic and cultural events. We help artists and cultural professionals connect, learn, and grow.
+                S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management.
             </p>
         </section>
+        
+        <section id="projekte">
+            <h2 data-lang="projekte">Projekte</h2>
+        </section>
+        
+        <section id="projektarchiv">
+            <h2 data-lang="projektarchiv">Projektarchiv</h2>
+        </section>
 
-        <section id="competition" class="competition">
-            <h2 data-lang="comp_title">Afrosta Live Music Competition</h2>
-            <p data-lang="comp_text">Show your talent, get votes, and win big rewards!</p>
+        <section id="angebote">
+            <h2 data-lang="angebote">Angebote</h2>
+        </section>
+
+        <section id="shop">
+            <h2 data-lang="shop">Shop</h2>
         </section>
     </main>
 
     <footer id="contact">
+        <h2 data-lang="contact">Kontakt</h2>
         <p data-lang="footer_info">Lomé Headquarters: Ets NOGEN / Novissi</p>
         <p>Email: scatstudio@gmail.com | Tel: +49 176 63165273</p>
     </footer>
@@ -52,27 +68,27 @@
     <script>
         const translations = {
             fr: {
-                home: "Accueil", about: "À Propos", comp: "Compétition", contact: "Contact",
+                aktuelles: "Actualités", about: "À Propos", projekte: "Projets", projektarchiv: "Archives des Projets",
+                angebote: "Offres", shop: "Boutique", contact: "Contact", warenkorb: "Panier (0)",
                 title: "S-CAT STUDIO", subtitle: "Recrutement • Formation • Gestion Culturelle",
                 about_title: "Qui sommes-nous ?",
-                about_text: "S-CAT STUDIO est une organisation créative et culturelle spécialisée dans le recrutement, la formation et la gestion culturelle. Nous produisons des projets de studio, coordonnons des bénévoles internationaux et gérons des événements artistiques.",
-                comp_title: "Compétition Musicale Afrosta", comp_text: "Montrez votre talent, obtenez des votes et gagnez de grandes récompenses !",
+                about_text: "S-CAT STUDIO est une organisation créative et culturelle spécialisée dans le recrutement, la formation et la gestion culturelle.",
                 footer_info: "Siège Lomé : Ets NOGEN / Novissi"
             },
             en: {
-                home: "Home", about: "About Us", comp: "Competition", contact: "Contact",
+                aktuelles: "News", about: "About Us", projekte: "Projects", projektarchiv: "Project Archive",
+                angebote: "Offers", shop: "Shop", contact: "Contact", warenkorb: "Cart (0)",
                 title: "S-CAT STUDIO", subtitle: "Recruitment • Training • Cultural Management",
                 about_title: "Who We Are",
-                about_text: "S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management. We produce studio and recording projects, coordinate international volunteers, and manage artistic and cultural events.",
-                comp_title: "Afrosta Live Music Competition", comp_text: "Show your talent, get votes, and win big rewards!",
+                about_text: "S-CAT STUDIO is a creative and cultural organization that focuses on recruitment, training, and cultural management.",
                 footer_info: "Lomé Headquarters: Ets NOGEN / Novissi"
             },
             de: {
-                home: "Startseite", about: "Über uns", comp: "Wettbewerb", contact: "Kontakt",
+                aktuelles: "Aktuelles", about: "Über uns", projekte: "Projekte", projektarchiv: "Projektarchiv",
+                angebote: "Angebote", shop: "Shop", contact: "Kontakt", warenkorb: "Warenkorb (0)",
                 title: "S-CAT STUDIO", subtitle: "Rekrutierung • Ausbildung • Kulturmanagement",
                 about_title: "Über uns",
-                about_text: "S-CAT STUDIO ist eine kreative und kulturelle Organisation, die sich auf Rekrutierung, Ausbildung und Kulturmanagement konzentriert. Wir produzieren Studio- und Aufnahmeprojekte, koordinieren internationale Freiwillige und verwalten künstlerische und kulturelle Veranstaltungen.",
-                comp_title: "Afrosta Live Musikwettbewerb", comp_text: "Zeigen Sie Ihr Talent, erhalten Sie Stimmen und gewinnen Sie große Belohnungen!",
+                about_text: "S-CAT STUDIO ist eine kreative und kulturelle Organisation, die sich auf Rekrutierung, Ausbildung und Kulturmanagement konzentriert.",
                 footer_info: "Hauptsitz Lomé: Ets NOGEN / Novissi"
             }
         };
@@ -80,7 +96,10 @@
         function changeLanguage() {
             const lang = document.getElementById('langSwitcher').value;
             document.querySelectorAll('[data-lang]').forEach(el => {
-                el.innerText = translations[lang][el.getAttribute('data-lang')];
+                const key = el.getAttribute('data-lang');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
             });
         }
     </script>

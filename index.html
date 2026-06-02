@@ -20,7 +20,6 @@
                 <li><a href="#shop" data-lang="shop">Shop</a></li>
                 <li><a href="#faq" data-lang="faq">FAQ</a></li>
                 <li><a href="#contact" data-lang="contact">Kontakt</a></li>
-                <li><a href="#warenkorb" data-lang="warenkorb">Warenkorb (0)</a></li>
             </ul>
             <select id="langSwitcher" onchange="changeLanguage()">
                 <option value="fr">Français</option>
@@ -33,37 +32,36 @@
     <main>
         <section id="aktuelles" class="hero">
             <h1 data-lang="title">S-CAT STUDIO</h1>
-            <p data-lang="subtitle">Recruitment • Training • Cultural Management</p>
+            <p>SIMPLE CAT STUDIO</p>
         </section>
 
         <section id="about" class="about">
-            <h2 data-lang="about_title">Who We Are</h2>
-            <p data-lang="about_text">
-                S-CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.
-            </p>
+            <h2 data-lang="about_title">Über Uns</h2>
+            <p><strong>Founder:</strong> Chef Agbortabi Sherriff</p>
+            <p>SIMPLE CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.</p>
         </section>
         
         <section id="projekte">
-            <h2 data-lang="projekte">Projekte</h2>
-            <p>Our Areas of operation: We Produce, Promote, Transform, Commercialize, Export, Import and Organize.</p>
+            <h2 data-lang="projekte">Unsere Einsatzgebiete</h2>
+            <p>We Produce, Promote, Transform, Commercialize, Export, Import and Organize.</p>
         </section>
-        
+
+        <section id="faq">
+            <h2 data-lang="faq_title">FAQ: PAYG Platform</h2>
+            <p><strong>Q: What hardware is required?</strong></p>
+            <p>STS-compliant prepaid meters and a cloud-based server.</p>
+            <p><strong>Q: Is it functioning?</strong></p>
+            <p>Yes, the core logic is functional and undergoing pilot testing.</p>
+            <p><strong>Q: What are the costs?</strong></p>
+            <p>Setup fees, hardware costs, and variable transaction fees based on scale.</p>
+        </section>
+
         <section id="projektarchiv">
             <h2 data-lang="projektarchiv">Projektarchiv</h2>
         </section>
 
         <section id="angebote">
             <h2 data-lang="angebote">Angebote</h2>
-        </section>
-
-        <section id="faq">
-            <h2 data-lang="faq_title">FAQ: PAYG Platform</h2>
-            <p><strong>Q: What hardware is required?</strong></p>
-            <p data-lang="faq_ans1">STS-compliant prepaid meters and a cloud-based server.</p>
-            <p><strong>Q: Is it functioning?</strong></p>
-            <p data-lang="faq_ans2">Yes, the core logic is functional and undergoing pilot testing.</p>
-            <p><strong>Q: What are the costs?</strong></p>
-            <p data-lang="faq_ans3">Setup fees, hardware costs, and variable transaction fees based on scale.</p>
         </section>
 
         <section id="shop">
@@ -73,7 +71,8 @@
 
     <footer id="contact">
         <h2 data-lang="contact">Kontakt</h2>
-        <p data-lang="footer_info">Lomé Headquarters: Ets NOGEN / Novissi</p>
+        <p>Founder: Chef Agbortabi Sherriff</p>
+        <p>Siège Lomé: Ets NOGEN / Novissi</p>
         <p>Email: scatstudio@gmail.com | Tel: +49 176 63165273 / +228 96233333</p>
     </footer>
 
@@ -81,30 +80,18 @@
         const translations = {
             fr: {
                 aktuelles: "Actualités", about: "À Propos", projekte: "Projets", projektarchiv: "Archives des Projets",
-                angebote: "Offres", shop: "Boutique", contact: "Contact", warenkorb: "Panier (0)", faq: "FAQ",
-                faq_title: "FAQ: Plateforme PAYG", faq_ans1: "Compteurs prépayés conformes STS et serveur cloud.", faq_ans2: "Oui, la logique est fonctionnelle.", faq_ans3: "Frais d'installation, matériel et frais de transaction.",
-                title: "S-CAT STUDIO", subtitle: "Recrutement • Formation • Gestion Culturelle",
-                about_title: "Qui sommes-nous ?",
-                about_text: "S-CAT STUDIO est une organisation caritative, sociale, culturelle et de développement communautaire avec une grande volonté de réussite.",
-                footer_info: "Siège Lomé : Ets NOGEN / Novissi"
+                angebote: "Offres", shop: "Boutique", contact: "Contact", faq: "FAQ",
+                title: "S-CAT STUDIO"
             },
             en: {
                 aktuelles: "News", about: "About Us", projekte: "Projects", projektarchiv: "Project Archive",
-                angebote: "Offers", shop: "Shop", contact: "Contact", warenkorb: "Cart (0)", faq: "FAQ",
-                faq_title: "FAQ: PAYG Platform", faq_ans1: "STS-compliant prepaid meters and a cloud-based server.", faq_ans2: "Yes, the core logic is functional.", faq_ans3: "Setup fees, hardware costs, and variable transaction fees.",
-                title: "S-CAT STUDIO", subtitle: "Recruitment • Training • Cultural Management",
-                about_title: "Who We Are",
-                about_text: "S-CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.",
-                footer_info: "Lomé Headquarters: Ets NOGEN / Novissi"
+                angebote: "Offers", shop: "Shop", contact: "Contact", faq: "FAQ",
+                title: "S-CAT STUDIO"
             },
             de: {
                 aktuelles: "Aktuelles", about: "Über uns", projekte: "Projekte", projektarchiv: "Projektarchiv",
-                angebote: "Angebote", shop: "Shop", contact: "Kontakt", warenkorb: "Warenkorb (0)", faq: "FAQ",
-                faq_title: "FAQ: PAYG-Plattform", faq_ans1: "STS-konforme Prepaid-Zähler und ein Cloud-Server.", faq_ans2: "Ja, die Kernlogik ist funktionsfähig.", faq_ans3: "Einrichtungsgebühren, Hardwarekosten und variable Transaktionsgebühren.",
-                title: "S-CAT STUDIO", subtitle: "Rekrutierung • Ausbildung • Kulturmanagement",
-                about_title: "Über uns",
-                about_text: "S-CAT STUDIO ist ein gemeinnütziges Unternehmen für soziale, kulturelle und gemeinschaftliche Entwicklung mit hohem Erfolgswillen.",
-                footer_info: "Hauptsitz Lomé: Ets NOGEN / Novissi"
+                angebote: "Angebote", shop: "Shop", contact: "Kontakt", faq: "FAQ",
+                title: "S-CAT STUDIO"
             }
         };
 

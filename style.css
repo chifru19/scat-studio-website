@@ -5,7 +5,7 @@ header { width: 250px; height: 100vh; position: fixed; background: var(--brand-g
 nav a { color: var(--white); text-decoration: none; display: block; margin-bottom: 20px; }
 main { margin-left: 250px; padding: 50px; }
 .logo-header { 
-    background-image: url('image_8dcd61.jpg'); 
+    background-image: url('header-logo.jpg'); 
     background-size: cover; 
     background-position: center; 
     min-height: 400px; 

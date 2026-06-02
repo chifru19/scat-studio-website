@@ -12,14 +12,12 @@
         <nav>
             <div class="brand">S-CAT STUDIO</div>
             <ul>
-                <li><a href="#aktuelles" data-lang="aktuelles">Aktuelles</a></li>
-                <li><a href="#about" data-lang="about">Über Uns</a></li>
-                <li><a href="#projekte" data-lang="projekte">Projekte</a></li>
-                <li><a href="#projektarchiv" data-lang="projektarchiv">Projektarchiv</a></li>
-                <li><a href="#angebote" data-lang="angebote">Angebote</a></li>
-                <li><a href="#shop" data-lang="shop">Shop</a></li>
-                <li><a href="#faq" data-lang="faq">FAQ</a></li>
-                <li><a href="#contact" data-lang="contact">Kontakt</a></li>
+                <li><a href="#aktuelles">Aktuelles</a></li>
+                <li><a href="#about">Über Uns</a></li>
+                <li><a href="#operationen">Areas of Operation</a></li>
+                <li><a href="#registration">Register Online</a></li>
+                <li><a href="#donate">Donate Online</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
             <select id="langSwitcher" onchange="changeLanguage()">
                 <option value="fr">Français</option>
@@ -32,76 +30,52 @@
     <main>
         <section id="aktuelles" class="hero">
             <h1 data-lang="title">S-CAT STUDIO</h1>
-            <p>SIMPLE CAT STUDIO</p>
+            <p>SIMPLE CAT STUDIO • Recrutement • Formation • Accompagnement Culturel</p>
         </section>
 
         <section id="about" class="about">
             <h2 data-lang="about_title">Über Uns</h2>
-            <p><strong>Founder:</strong> Chef Agbortabi Sherriff</p>
+            <p><strong>Founder & CEO:</strong> Ako enow Chérif (Agbor Tabi)</p>
             <p>SIMPLE CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.</p>
         </section>
         
-        <section id="projekte">
-            <h2 data-lang="projekte">Unsere Einsatzgebiete</h2>
+        <section id="operationen">
+            <h2 data-lang="projekte">Our Areas of Operation</h2>
             <p>We Produce, Promote, Transform, Commercialize, Export, Import and Organize.</p>
         </section>
 
-        <section id="faq">
-            <h2 data-lang="faq_title">FAQ: PAYG Platform</h2>
-            <p><strong>Q: What hardware is required?</strong></p>
-            <p>STS-compliant prepaid meters and a cloud-based server.</p>
-            <p><strong>Q: Is it functioning?</strong></p>
-            <p>Yes, the core logic is functional and undergoing pilot testing.</p>
-            <p><strong>Q: What are the costs?</strong></p>
-            <p>Setup fees, hardware costs, and variable transaction fees based on scale.</p>
+        <section id="registration">
+            <h2 data-lang="registration">Register Online</h2>
+            <p>Join our programs! Please fill out the registration form to participate in our cultural and training initiatives.</p>
+            <button class="btn">Register Now</button>
         </section>
 
-        <section id="projektarchiv">
-            <h2 data-lang="projektarchiv">Projektarchiv</h2>
-        </section>
-
-        <section id="angebote">
-            <h2 data-lang="angebote">Angebote</h2>
-        </section>
-
-        <section id="shop">
-            <h2 data-lang="shop">Shop</h2>
+        <section id="donate">
+            <h2 data-lang="donate">Donate Online</h2>
+            <p>Support our mission. Your contributions help us drive community development and cultural success.</p>
+            <button class="btn">Donate Now</button>
         </section>
     </main>
 
     <footer id="contact">
         <h2 data-lang="contact">Kontakt</h2>
-        <p>Founder: Chef Agbortabi Sherriff</p>
+        <p>Founder: Ako enow Chérif (Agbor Tabi)</p>
         <p>Siège Lomé: Ets NOGEN / Novissi</p>
         <p>Email: scatstudio@gmail.com | Tel: +49 176 63165273 / +228 96233333</p>
     </footer>
 
     <script>
         const translations = {
-            fr: {
-                aktuelles: "Actualités", about: "À Propos", projekte: "Projets", projektarchiv: "Archives des Projets",
-                angebote: "Offres", shop: "Boutique", contact: "Contact", faq: "FAQ",
-                title: "S-CAT STUDIO"
-            },
-            en: {
-                aktuelles: "News", about: "About Us", projekte: "Projects", projektarchiv: "Project Archive",
-                angebote: "Offers", shop: "Shop", contact: "Contact", faq: "FAQ",
-                title: "S-CAT STUDIO"
-            },
-            de: {
-                aktuelles: "Aktuelles", about: "Über uns", projekte: "Projekte", projektarchiv: "Projektarchiv",
-                angebote: "Angebote", shop: "Shop", contact: "Kontakt", faq: "FAQ",
-                title: "S-CAT STUDIO"
-            }
+            fr: { title: "S-CAT STUDIO", about_title: "À Propos", registration: "Inscription en ligne", donate: "Faire un don", contact: "Contact" },
+            en: { title: "S-CAT STUDIO", about_title: "About Us", registration: "Register Online", donate: "Donate Online", contact: "Contact" },
+            de: { title: "S-CAT STUDIO", about_title: "Über uns", registration: "Online registrieren", donate: "Online spenden", contact: "Kontakt" }
         };
 
         function changeLanguage() {
             const lang = document.getElementById('langSwitcher').value;
             document.querySelectorAll('[data-lang]').forEach(el => {
                 const key = el.getAttribute('data-lang');
-                if (translations[lang][key]) {
-                    el.innerText = translations[lang][key];
-                }
+                if (translations[lang][key]) el.innerText = translations[lang][key];
             });
         }
     </script>

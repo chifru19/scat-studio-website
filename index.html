@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <nav>
             <div class="brand">S-CAT STUDIO</div>
@@ -19,81 +18,44 @@
                 <li><a href="#donate">Donate Online</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
-            <select id="langSwitcher" onchange="changeLanguage()">
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
         </nav>
     </header>
-
-<main>
-    <section id="aktuelles" class="hero">
-        <h1 data-lang="title">S-CAT STUDIO</h1>
-        <p>SIMPLE CAT STUDIO • Recrutement • Formation • Accompagnement Culturel</p>
-    </section>
-
-    <section id="about" class="about">
-        <h2 data-lang="about_title">Über Uns</h2>
-        <p><strong>Founder & CEO:</strong> Ako enow Chérif (Agbor Tabi)</p>
-        <p>SIMPLE CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.</p>
-    </section>
-    
-    <section id="team">
-        <h2>Our Members</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <h3>Ako enow Chérif (Agbor Tabi)</h3>
-                <p>Founder / PDG</p>
+    <main>
+        <section id="aktuelles" class="hero logo-header">
+            <h1>S-CAT STUDIO</h1>
+            <p>SIMPLE CAT STUDIO • Recrutement • Formation • Accompagnement Culturel</p>
+        </section>
+        <section id="about" class="about">
+            <h2>Über Uns</h2>
+            <p><strong>Founder & CEO:</strong> Ako enow Chérif (Agbor Tabi)</p>
+            <p>SIMPLE CAT STUDIO is a Charity Social Cultural Economy and Community development Enterprise with a high drive for Success.</p>
+        </section>
+        <section id="team">
+            <h2>Our Members</h2>
+            <div class="team-grid">
+                <div class="team-card"><h3>Ako enow Chérif (Agbor Tabi)</h3><p>Founder / PDG</p></div>
+                <div class="team-card"><h3>Koffi Christian Melonkou</h3><p>Directeur Artistique / Coach</p></div>
+                <div class="team-card"><h3>Louise Mayung A.E Agbor Tabi</h3><p>Ambassadrice Culturelle</p></div>
             </div>
-            <div class="team-card">
-                <h3>Koffi Christian Melonkou</h3>
-                <p>Directeur Artistique / Coach</p>
-            </div>
-            <div class="team-card">
-                <h3>Louise Mayung A.E Agbor Tabi</h3>
-                <p>Ambassadrice Culturelle</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="operationen">
-        <h2>Our Areas of Operation</h2>
-        <p>We Produce, Promote, Transform, Commercialize, Export, Import and Organize.</p>
-    </section>
-
-    <section id="registration">
-        <h2>Register Online</h2>
-        <a href="YOUR_REGISTRATION_URL" class="btn">Register Now</a>
-    </section>
-
-    <section id="donate">
-        <h2>Donate Online</h2>
-        <a href="YOUR_DONATION_URL" class="btn">Donate Now</a>
-    </section>
-</main>
-
+        </section>
+        <section id="operationen">
+            <h2>Our Areas of Operation</h2>
+            <p>We Produce, Promote, Transform, Commercialize, Export, Import and Organize.</p>
+        </section>
+        <section id="registration">
+            <h2>Register Online</h2>
+            <a href="#" class="btn">Register Now</a>
+        </section>
+        <section id="donate">
+            <h2>Donate Online</h2>
+            <a href="#" class="btn">Donate Now</a>
+        </section>
+    </main>
     <footer id="contact">
-        <h2 data-lang="contact">Kontakt</h2>
+        <h2>Kontakt</h2>
         <p>Founder: Ako enow Chérif (Agbor Tabi)</p>
         <p>Siège Lomé: Ets NOGEN / Novissi</p>
         <p>Email: scatstudio@gmail.com | Tel: +49 176 63165273 / +228 96233333</p>
     </footer>
-
-    <script>
-        const translations = {
-            fr: { title: "S-CAT STUDIO", about_title: "À Propos", registration: "Inscription en ligne", donate: "Faire un don", contact: "Contact" },
-            en: { title: "S-CAT STUDIO", about_title: "About Us", registration: "Register Online", donate: "Donate Online", contact: "Contact" },
-            de: { title: "S-CAT STUDIO", about_title: "Über uns", registration: "Online registrieren", donate: "Online spenden", contact: "Kontakt" }
-        };
-
-        function changeLanguage() {
-            const lang = document.getElementById('langSwitcher').value;
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                const key = el.getAttribute('data-lang');
-                if (translations[lang][key]) el.innerText = translations[lang][key];
-            });
-        }
-    </script>
 </body>
 </html>

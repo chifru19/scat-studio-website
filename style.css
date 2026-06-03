@@ -1,24 +1,13 @@
 :root { --brand-green: #1b4332; --brand-orange: #f77f00; --white: #ffffff; }
 
-body { margin: 0; font-family: sans-serif; display: flex; }
-
+body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
 header { width: 250px; height: 100vh; position: fixed; background: var(--brand-green); color: var(--white); padding: 30px; }
 .brand { font-weight: 800; font-size: 1.8rem; margin-bottom: 50px; border-bottom: 2px solid var(--brand-orange); }
 
-nav a { color: #e0e0e0; display: block; padding: 12px 0; text-decoration: none; font-size: 1rem; }
+nav a { color: #e0e0e0; display: block; padding: 12px 0; text-decoration: none; }
 nav a:hover { color: var(--white); }
 
-main { margin-left: 280px; padding: 40px; width: calc(100% - 280px); }
+main { margin-left: 310px; padding: 40px; flex: 1; }
 
-h2 { border-bottom: 2px solid var(--brand-orange); padding-bottom: 10px; }
-
-/* Footer Styling */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-}
-footer a { color: var(--brand-green); text-decoration: none; }
+footer { margin-left: 310px; padding: 20px; border-top: 1px solid #ddd; text-align: center; background: #f9f9f9; }
+footer a { color: var(--brand-green); font-weight: bold; }

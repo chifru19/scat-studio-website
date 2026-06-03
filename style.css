@@ -1,5 +1,13 @@
-:root { --brand-green: #1b4332; }
-body { margin: 0; font-family: sans-serif; display: flex; }
+:root { 
+    --brand-green: #1b4332; 
+    --brand-orange: #f77f00; 
+}
+
+body { 
+    margin: 0; 
+    font-family: sans-serif; 
+    display: flex; 
+}
 
 header { 
     width: 280px; 
@@ -11,10 +19,28 @@ header {
 }
 
 .logo { width: 100%; margin-bottom: 20px; }
-.hero-img { width: 100%; max-width: 800px; display: block; margin: 0 auto 30px auto; }
-
-main { margin-left: 320px; padding: 40px; width: calc(100% - 320px); }
-footer { margin-left: 320px; padding: 40px; background: #f4f4f4; width: calc(100% - 320px); }
+.brand { font-weight: 800; font-size: 1.5rem; margin-bottom: 20px; }
 
 nav ul { list-style: none; padding: 0; }
-nav a { color: white; text-decoration: none; display: block; padding: 10px 0; }
+nav a { color: white; text-decoration: none; display: block; padding: 12px 0; }
+
+main { 
+    margin-left: 320px; 
+    padding: 40px; 
+    width: calc(100% - 320px); 
+}
+
+.hero-img { 
+    width: 100%; 
+    max-width: 800px; 
+    display: block; 
+    margin: 0 auto 30px auto; 
+    border-radius: 8px; 
+}
+
+footer { 
+    margin-left: 320px; 
+    padding: 40px; 
+    background: #f4f4f4; 
+    border-top: 5px solid var(--brand-green); 
+}

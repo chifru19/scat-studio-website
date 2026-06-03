@@ -1,10 +1,31 @@
-:root { --brand-green: #1b4332; --brand-orange: #f77f00; }
-body { margin: 0; font-family: sans-serif; display: flex; min-height: 100vh; }
-header { width: 280px; background: var(--brand-green); color: white; padding: 40px; position: fixed; height: 100vh; display: flex; flex-direction: column; }
-.brand { font-weight: 800; font-size: 1.8rem; margin-bottom: 40px; }
-.hero-img { width: 100%; max-width: 800px; display: block; margin: 0 auto 30px auto; border-radius: 8px; }
-nav a { color: white; text-decoration: none; display: block; padding: 12px 0; }
-main { margin-left: 320px; padding: 40px; flex: 1; }
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.team-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
-footer { margin-left: 320px; padding: 40px; background: #f4f4f4; border-top: 5px solid var(--brand-green); }
+:root { 
+  --brand-green: #1b4332; 
+  --brand-orange: #f77f00; 
+} 
+
+body { 
+  margin: 0; 
+  font-family: sans-serif; 
+  display: flex; 
+  min-height: 100vh; 
+} 
+
+header { 
+  width: 280px; 
+  background: var(--brand-green); 
+  color: white; 
+  padding: 40px; 
+  position: fixed; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+} 
+
+.brand { 
+  font-weight: 800; 
+  font-size: 1.8rem; 
+  margin-bottom: 40px; 
+} 
+
+.hero-img { 
+  width: 100
